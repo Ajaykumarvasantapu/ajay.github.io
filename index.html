@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UniSocial Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css " rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <h1 class="logo">UniSocial</h1>
+      <nav>
+        <ul>
+          <li><a href="#" data-tab="dashboard"><i class="fas fa-th"></i> Dashboard</a></li>
+          <li><a href="#" data-tab="schedule"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+          <li><a href="#" data-tab="analytics"><i class="fas fa-chart-line"></i> Analytics</a></li>
+          <li><a href="#" data-tab="inbox"><i class="fas fa-inbox"></i> Inbox</a></li>
+        </ul>
+
+        <div class="social-links">
+          <h3>Accounts</h3>
+          <div class="accounts">
+            <span class="account twitter"><i class="fab fa-twitter"></i></span>
+            <span class="account facebook"><i class="fab fa-facebook"></i></span>
+            <span class="account instagram"><i class="fab fa-instagram"></i></span>
+            <span class="account linkedin"><i class="fab fa-linkedin"></i></span>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <h2 id="pageTitle">Dashboard</h2>
+        <div class="header-right">
+          <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+          <img src="https://via.placeholder.com/40 " alt="User" class="user-avatar">
+        </div>
+      </header>
+
+      <!-- Dashboard Tab -->
+      <section id="dashboard" class="tab-content active">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total Posts</h3>
+            <p class="value">147</p>
+            <p class="change positive">↑ +12% from last week</p>
+          </div>
+          <div class="stat-card">
+            <h3>Engagement Rate</h3>
+            <p class="value">4.8%</p>
+            <p class="change positive">↑ +0.5%</p>
+          </div>
+          <div class="stat-card">
+            <h3>Followers</h3>
+            <p class="value">24.3K</p>
+            <p class="change positive">↑ +2.1K</p>
+          </div>
+        </div>
+
+        <div class="post-composer">
+          <h3>Create New Post</h3>
+          <textarea placeholder="What's happening?" rows="4"></textarea>
+          <div class="composer-footer">
+            <div class="tools">
+              <i class="far fa-image"></i>
+              <i class="far fa-chart-bar"></i>
+              <i class="far fa-smile"></i>
+            </div>
+            <button id="postBtn">Schedule</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Schedule Tab -->
+      <section id="schedule" class="tab-content">
+        <h3>Scheduled Posts</h3>
+        <ul class="post-list">
+          <li>📸 Product Launch - <strong>Tomorrow, 10:00 AM</strong></li>
+          <li>📢 Weekly Tips - <strong>Friday, 2:00 PM</strong></li>
+          <li>🎉 Event Reminder - <strong>Next Week</strong></li>
+        </ul>
+      </section>
+
+      <!-- Analytics Tab -->
+      <section id="analytics" class="tab-content">
+        <h3>Weekly Engagement</h3>
+        <div class="chart-placeholder">
+          [Chart would go here - e.g., use Chart.js later]
+        </div>
+      </section>
+
+      <!-- Inbox Tab -->
+      <section id="inbox" class="tab-content">
+        <h3>Inbox Messages</h3>
+        <div class="message">
+          <strong>@john_doe:</strong> Love your latest post!
+        </div>
+        <div class="message">
+          <strong>@designer_ai:</strong> Can we collaborate?
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<div class="social-links">
+  <h3>My Accounts</h3>
+  <div class="accounts">
+    <!-- Replace 'your_twitter_handle' with actual username -->
+    <a href="https://twitter.com/your_twitter_handle " target="_blank" title="Open Twitter" class="account twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <!-- Facebook Profile -->
+    <a href="https://facebook.com/your_username " target="_blank" title="Open Facebook" class="account facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+
+    <!-- Instagram Profile -->
+    <a href="https://instagram.com/your_instagram_handle " target="_blank" title="Open Instagram" class="account instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- LinkedIn Profile -->
+    <a href="https://linkedin.com/in/your_linkedin_slug " target="_blank" title="Open LinkedIn" class="account linkedin">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</div>
+<section id="settings" class="tab-content">
+  <h3>Connect Your Accounts</h3>
+  <form id="accountForm">
+    <input type="text" id="twitterHandle" placeholder="Twitter Handle (e.g., elonmusk)" /><br><br>
+    <input type="text" id="facebookUser" placeholder="Facebook Username" /><br><br>
+    <input type="text" id="instaHandle" placeholder="Instagram Handle" /><br><br>
+    <input type="text" id="linkedinSlug" placeholder="LinkedIn Profile Slug" /><br><br>
+    <button type="submit">Save & Update Links</button>
+  </form>
+</section>
+<li><a href="#" data-tab="settings"><i class="fas fa-cog"></i> Settings</a></li>
